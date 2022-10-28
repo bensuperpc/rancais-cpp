@@ -15,6 +15,7 @@
 #define dans in
 #define avec using
 
+#define principal main
 #define retourne return
 #define cas switch
 #define cas_de case
@@ -33,12 +34,22 @@
 #define protege protected
 #define ami friend
 #define virtuel virtual
+#define automatique auto
 
 #define vecteur vector
 #define liste list
 #define file queue
 #define pile stack
-#define chaine_de_caracteres std::string
+#define chaine_de_caracteres string
+#define carte map
+#define ensemble set
+
+#define sortie cout
+#define entree cin
+#define erreur cerr
+#define flux flux
+#define fin_de_ligne endl
+
 
 #define statique static
 #define constante const
@@ -54,7 +65,30 @@
 #define attraper catch
 #define lancer throw
 
-#define taille size
+#define taille_de size_of
+
+#define operateur operator
+
+#define non !
+//#define plus +
+#define moins -
+#define fois *
+#define divise /
+#define modulo %
+
+#define egal ==
+#define et &&
+#define ou ||
+#define et_egal &=
+#define ou_egal |=
+#define non_egal !=
+#define plus_egal +=
+#define moins_egal -=
+#define fois_egal *=
+#define divise_egal /=
+#define modulo_egal %=
+#define bit_egal ^=
+
 
 #include <string>
 
@@ -63,5 +97,5 @@
  */
 inline auto name() -> std::string
 {
-  return "rancais-cpp";
+  return "rancais_cpp";
 }

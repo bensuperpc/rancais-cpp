@@ -3,9 +3,9 @@ cmake_minimum_required(VERSION 3.14)
 include(cmake/prelude.cmake)
 
 project(
-    rancais-cpp
+    rancais_cpp
     VERSION 0.1.0
-    DESCRIPTION "rancais-cpp"
+    DESCRIPTION "rancais_cpp"
     HOMEPAGE_URL "https://example.com/"
     LANGUAGES NONE
 )
@@ -15,21 +15,21 @@ include(cmake/variables.cmake)
 
 # ---- Declare library ----
 
-add_library(rancais-cpp_rancais-cpp INTERFACE)
-add_library(rancais-cpp::rancais-cpp ALIAS rancais-cpp_rancais-cpp)
+add_library(rancais_cpp_rancais_cpp INTERFACE)
+add_library(rancais_cpp::rancais_cpp ALIAS rancais_cpp_rancais_cpp)
 
 set_property(
-    TARGET rancais-cpp_rancais-cpp PROPERTY
-    EXPORT_NAME rancais-cpp
+    TARGET rancais_cpp_rancais_cpp PROPERTY
+    EXPORT_NAME rancais_cpp
 )
 
 target_include_directories(
-    rancais-cpp_rancais-cpp ${warning_guard}
+    rancais_cpp_rancais_cpp ${warning_guard}
     INTERFACE
     "$<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/include>"
 )
 
-target_compile_features(rancais-cpp_rancais-cpp INTERFACE cxx_std_20)
+target_compile_features(rancais_cpp_rancais_cpp INTERFACE cxx_std_20)
 
 # ---- Install rules ----
 
@@ -40,7 +40,7 @@ endif()
 # ---- Examples ----
 
 if(PROJECT_IS_TOP_LEVEL)
-  option(BUILD_EXAMPLES "Build examples tree." "${rancais-cpp_DEVELOPER_MODE}")
+  option(BUILD_EXAMPLES "Build examples tree." "${rancais_cpp_DEVELOPER_MODE}")
   if(BUILD_EXAMPLES)
     add_subdirectory(example)
   endif()
@@ -48,12 +48,12 @@ endif()
 
 # ---- Developer mode ----
 
-if(NOT rancais-cpp_DEVELOPER_MODE)
+if(NOT rancais_cpp_DEVELOPER_MODE)
   return()
 elseif(NOT PROJECT_IS_TOP_LEVEL)
   message(
       AUTHOR_WARNING
-      "Developer mode is intended for developers of rancais-cpp"
+      "Developer mode is intended for developers of rancais_cpp"
   )
 endif()
 

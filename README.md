@@ -1,6 +1,6 @@
-# rancais-cpp
+# rancais_cpp
 
-This is the rancais-cpp project.
+This is the rancais_cpp project.
 
 # Building and installing
 
